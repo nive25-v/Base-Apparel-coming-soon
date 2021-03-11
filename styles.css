@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+html{
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover cover;
+    justify-content: center;
+    align-items: center;
+    
+}
+.mobile-img{
+    display: none;
+}
+.container, .logo {
+    padding: 1.5rem 3.5rem;
+    margin: 1.5rem 3.5rem;
+}
+.logo{
+    padding-top: 0;
+    align-self: flex-start;
+}
+.header{
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 4.5rem;
+    color: hsl(0, 6%, 24%);
+    min-height: 216px;
+}
+
+.pink{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+.main-para{
+    color:  hsl(0, 36%, 70%);
+    line-height: 1.5rem;
+    max-width: 80%;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px ; /* top left, top right, bottom right, bottom left */;
+    border: 1px solid lightgrey;
+    margin-bottom: 1rem;
+    background-color: white;
+    width: 80%;
+}
+input:focus{
+    outline: none;
+}
+
+#text-g{
+    margin-bottom: 0.3rem;
+    width: 80%;
+    border:none;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    flex-grow: 3;
+    margin-left: 1rem;
+}
+#icon-err{
+    visibility: hidden;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    max-width: 20px;
+    max-height: 20px;
+}
+#alert-text{
+    color: red;
+    visibility: hidden;
+}
+.btn{
+    width: 20%;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
+    border-radius: 30px;
+    outline: none;
+    background-image:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+@media (max-width:1106px){
+    .header{
+        font-size: 2.6rem;
+    }
+}
+@media (max-width:840px){
+    .logo img{
+        margin: 0 2rem;
+    }
+    .wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .right{
+        display: none;
+    }
+    .container, .logo {
+        padding: 1.5rem 0;
+        margin: 1.5rem 0;
+    }
+    form, #text-g{
+        width: 50%;
+    }
+    .header{
+        font-size: 3rem;
+        line-height: 3.3rem;
+        margin-bottom: 0;
+    }  
+    .main-para{
+        padding-top: 0;
+        margin: auto;
+    }
+    .container > *{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    form{
+        margin-top: 2rem;
+    }
+    .mobile-img{ 
+        display: flex;
+        width: 100vw;
+    }
+    .mobile-img img{ 
+        width: 100%;
+    }
+}
